@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		183302A0206239F20013D73F /* BaHaWorldExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1833029F206239F20013D73F /* BaHaWorldExampleViewController.swift */; };
+		183302A420623BA70013D73F /* BaHa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183302A220623BA70013D73F /* BaHa.swift */; };
+		183302A520623C780013D73F /* BaHaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183302A320623BA70013D73F /* BaHaCell.xib */; };
 		28473B891C109EE200A8105F /* ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28473B881C109EE200A8105F /* ExampleUITests.swift */; };
 		28650D2C1C0DD21A008C1F27 /* PeriscopeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28650D251C0DD21A008C1F27 /* PeriscopeCell.xib */; };
 		28650D2D1C0DD21A008C1F27 /* SkypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28650D261C0DD21A008C1F27 /* SkypeCell.xib */; };
@@ -81,6 +84,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1833029F206239F20013D73F /* BaHaWorldExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaHaWorldExampleViewController.swift; sourceTree = "<group>"; };
+		183302A220623BA70013D73F /* BaHa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaHa.swift; sourceTree = "<group>"; };
+		183302A320623BA70013D73F /* BaHaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaHaCell.xib; sourceTree = "<group>"; };
 		28473B881C109EE200A8105F /* ExampleUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExampleUITests.swift; path = Example/UITests/ExampleUITests.swift; sourceTree = SOURCE_ROOT; };
 		28650D251C0DD21A008C1F27 /* PeriscopeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PeriscopeCell.xib; sourceTree = "<group>"; };
 		28650D261C0DD21A008C1F27 /* SkypeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SkypeCell.xib; sourceTree = "<group>"; };
@@ -148,6 +154,8 @@
 				B297A9261C0E198200AF9559 /* Twitter.swift */,
 				28650D2A1C0DD21A008C1F27 /* YoutubeCell.xib */,
 				B297A9291C0E19A500AF9559 /* Youtube.swift */,
+				183302A320623BA70013D73F /* BaHaCell.xib */,
+				183302A220623BA70013D73F /* BaHa.swift */,
 			);
 			path = CustomActionControllers;
 			sourceTree = "<group>";
@@ -182,6 +190,7 @@
 				28B3B87B1BFA8566007337A2 /* TweetbotExampleViewController.swift */,
 				28B3B87C1BFA8566007337A2 /* TwitterExampleViewController.swift */,
 				28AD9C771C03F34F0044164E /* SkypeExampleViewController.swift */,
+				1833029F206239F20013D73F /* BaHaWorldExampleViewController.swift */,
 				28B3B8591BFA7EEC007337A2 /* AppDelegate.swift */,
 				28B3B85D1BFA7EEC007337A2 /* Main.storyboard */,
 				28B3B8601BFA7EEC007337A2 /* Assets.xcassets */,
@@ -325,6 +334,7 @@
 				28650D2E1C0DD21A008C1F27 /* SpotifyCell.xib in Resources */,
 				28650D301C0DD21A008C1F27 /* TwitterCell.xib in Resources */,
 				28650D311C0DD21A008C1F27 /* YoutubeCell.xib in Resources */,
+				183302A520623C780013D73F /* BaHaCell.xib in Resources */,
 				28B3B8611BFA7EEC007337A2 /* Assets.xcassets in Resources */,
 				28650D2F1C0DD21A008C1F27 /* TweetbotCell.xib in Resources */,
 				28650D2D1C0DD21A008C1F27 /* SkypeCell.xib in Resources */,
@@ -373,6 +383,8 @@
 				B297A9361C0E26E300AF9559 /* MainViewController.swift in Sources */,
 				28B3B87E1BFA8566007337A2 /* SpotifyExampleViewController.swift in Sources */,
 				B297A9271C0E198200AF9559 /* Twitter.swift in Sources */,
+				183302A0206239F20013D73F /* BaHaWorldExampleViewController.swift in Sources */,
+				183302A420623BA70013D73F /* BaHa.swift in Sources */,
 				B297A9201C0E193B00AF9559 /* Spotify.swift in Sources */,
 				B297A92A1C0E19A500AF9559 /* Youtube.swift in Sources */,
 				28B3B87F1BFA8566007337A2 /* TweetbotExampleViewController.swift in Sources */,

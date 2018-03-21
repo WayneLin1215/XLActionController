@@ -214,6 +214,29 @@
                                             <segue destination="gv9-zC-sSQ" kind="show" id="GwF-DX-eZf"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="yzA-cg-rbN" style="IBUITableViewCellStyleDefault" id="eib-36-TG5">
+                                        <rect key="frame" x="0.0" y="264" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eib-36-TG5" id="LBn-D7-WKZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="巴哈看世界" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yzA-cg-rbN">
+                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="oUT-Cu-hvG" kind="show" id="PqY-sR-V5h"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -449,7 +472,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="766" y="2644"/>
+            <point key="canvasLocation" x="871" y="2643"/>
         </scene>
         <!--You Tube Example View Controller-->
         <scene sceneID="hWJ-m6-naj">
@@ -527,8 +550,62 @@
             </objects>
             <point key="canvasLocation" x="-339" y="1162"/>
         </scene>
+        <!--Ba Ha World Example View Controller-->
+        <scene sceneID="hcZ-KY-9Tz">
+            <objects>
+                <viewController id="oUT-Cu-hvG" customClass="BaHaWorldExampleViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TMS-3w-x3n">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BaHa" translatesAutoresizingMaskIntoConstraints="NO" id="ow7-ej-UNU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="6DU-TZ-of3" appends="YES" id="QtR-la-OlI"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ter-sr-rcQ">
+                                <rect key="frame" x="10" y="15" width="49" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Fdi-lr-hMe"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="NhY-6J-4e4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                <state key="normal" title="BACK">
+                                    <color key="titleColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonDidTouch:" destination="oUT-Cu-hvG" eventType="touchUpInside" id="zUT-H2-lhG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ter-sr-rcQ" firstAttribute="leading" secondItem="1K1-UE-vbv" secondAttribute="leading" constant="10" id="EN4-PZ-XK3"/>
+                            <constraint firstItem="ow7-ej-UNU" firstAttribute="top" secondItem="TMS-3w-x3n" secondAttribute="top" id="G3a-4X-N6e"/>
+                            <constraint firstAttribute="trailing" secondItem="ow7-ej-UNU" secondAttribute="trailing" id="QGT-uN-U8v"/>
+                            <constraint firstAttribute="bottom" secondItem="ow7-ej-UNU" secondAttribute="bottom" id="X1O-pP-sbK"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ter-sr-rcQ" secondAttribute="trailing" constant="20" symbolic="YES" id="Xta-Fl-qMx"/>
+                            <constraint firstItem="ow7-ej-UNU" firstAttribute="leading" secondItem="TMS-3w-x3n" secondAttribute="leading" id="euc-v6-srw"/>
+                            <constraint firstItem="1K1-UE-vbv" firstAttribute="top" secondItem="ter-sr-rcQ" secondAttribute="top" constant="5" id="gf8-JY-Kcv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1K1-UE-vbv"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B4K-3G-tx4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="6DU-TZ-of3">
+                    <connections>
+                        <action selector="tapGestureDidRecognize:" destination="oUT-Cu-hvG" id="Ve5-Fj-CWq"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="142" y="2643"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="BaHa" width="358" height="669"/>
         <image name="pe-background" width="375" height="667"/>
         <image name="skype-background" width="375" height="667"/>
         <image name="sp-background" width="375" height="667"/>
