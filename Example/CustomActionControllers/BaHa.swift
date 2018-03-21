@@ -50,7 +50,6 @@ open class BaHaCell: ActionCell {
     }
     
     func initialize() {
-        actionTitleLabel?.textColor = UIColor(white: 0.098, alpha: 1.0)
         let backgroundView = UIView()
         backgroundView.backgroundColor = UIColor.black.withAlphaComponent(0.0)
         backgroundView.addSubview(animatableBackgroundView)
