@@ -13,8 +13,8 @@ Pod::Spec.new do |spec|
 
   # Core subspec
   spec.subspec 'Core' do |core|
-    core.source_files = ['Source/*.swift', 'Source/*.xib', "Example/CustomActionControllers/*.swift"]
-    core.resources = ['Resource/*.xib', "Example/CustomActionControllers/*.xib"]
+    core.source_files = ['Source/*.swift', 'Source/*.xib']
+    core.resources = 'Resource/*.xib'
   end
 
   # One subspec for each example provided by the library
@@ -31,7 +31,7 @@ Pod::Spec.new do |spec|
   subspecs.each do |name|
     spec.subspec name do |subspec|
       subspec.dependency 'XLActionController/Core'
-      subspec.source_files = ["Example/CustomActionControllers/#{name}.swift", "Example/CustomActionControllers/ActionData.swift"]
+      subspec.source_files = ["Example/CustomActionControllers/#{name}.swift", "Example/CustomActionControllers/ActionData.swift", "Example/CustomActionControllers/#{name}*.xib"]
       subspec.resources = "Example/CustomActionControllers/#{name}*.xib"
     end
   end
