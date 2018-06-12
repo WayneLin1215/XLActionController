@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name     = 'XLActionController'
-  spec.version  = '4.1.0'
+  spec.version  = '4.1.1'
   spec.license  = 'MIT'
   spec.summary  = 'Fully customizable and extensible action sheet controller written in Swift'
   spec.homepage = 'https://github.com/xmartlabs/XLActionController'
@@ -31,7 +31,8 @@ Pod::Spec.new do |spec|
   subspecs.each do |name|
     spec.subspec name do |subspec|
       subspec.dependency 'XLActionController/Core'
-      subspec.source_files = ["Example/CustomActionControllers/#{name}.swift", "Example/CustomActionControllers/ActionData.swift", "Example/CustomActionControllers/#{name}*.xib"]
+      subspec.source_files = ["Example/CustomActionControllers/#{name}.swift", "Example/CustomActionControllers/ActionData.swift"]
+      subspec.resources = "Example/CustomActionControllers/#{name}*.xib"
     end
   end
 
