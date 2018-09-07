@@ -79,7 +79,7 @@ open class BaHaCell: ActionCell {
 }
 
 open class BaHaActionController: ActionController<BaHaCell, ActionData, UICollectionReusableView, Void, UICollectionReusableView, Void> {
-    init(nibName nibNameOrNil: String? = nil, bundle nibBundleOrNil: Bundle? = nil, darkStyle: Bool = false) {
+    public init(nibName nibNameOrNil: String? = nil, bundle nibBundleOrNil: Bundle? = nil, darkStyle: Bool = false) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
         collectionViewLayout.minimumLineSpacing = -0.5
