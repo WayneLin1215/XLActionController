@@ -27,6 +27,10 @@ import Foundation
 import XLActionController
 #endif
 
+enum Style {
+    case light, dark
+}
+
 open class BaHaCell: ActionCell {
     
     open lazy var animatableBackgroundView: UIView = { [weak self] in
@@ -79,8 +83,7 @@ open class BaHaCell: ActionCell {
 }
 
 open class BaHaActionController: ActionController<BaHaCell, ActionData, UICollectionReusableView, Void, UICollectionReusableView, Void> {
-    
-    public override init(nibName nibNameOrNil: String? = nil, bundle nibBundleOrNil: Bundle? = nil) {
+    init(nibName nibNameOrNil: String? = nil, bundle nibBundleOrNil: Bundle? = nil, style: Style = .light) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
         collectionViewLayout.minimumLineSpacing = -0.5
@@ -97,6 +100,7 @@ open class BaHaActionController: ActionController<BaHaCell, ActionData, UICollec
         onConfigureCellForAction = { [weak self] cell, action, indexPath in
             cell.setup(action.data?.title, detail: action.data?.subtitle, image: action.data?.image)
             cell.alpha = action.enabled ? 1.0 : 0.5
+            cell.backgroundColor = style == .light ? UIColor.white : UIColor(white: 216 / 255, alpha: 1)
             let actions = self?.sectionForIndex(indexPath.section)?.actions
             let actionsCount = actions!.count
             cell.separatorView?.isHidden = indexPath.item == (self?.collectionView.numberOfItems(inSection: indexPath.section))! - 1
