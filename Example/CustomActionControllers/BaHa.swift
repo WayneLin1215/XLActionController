@@ -96,7 +96,8 @@ open class BaHaActionController: ActionController<BaHaCell, ActionData, UICollec
         onConfigureCellForAction = { [weak self] cell, action, indexPath in
             cell.setup(action.data?.title, detail: action.data?.subtitle, image: action.data?.image)
             cell.alpha = action.enabled ? 1.0 : 0.5
-            cell.backgroundColor = darkStyle ? UIColor(white: 216 / 255, alpha: 1) : UIColor.white
+            cell.backgroundColor = darkStyle ? UIColor(white: 60 / 255, alpha: 1) : UIColor.white
+            cell.separatorView?.backgroundColor = darkStyle ? UIColor(white: 133 / 255, alpha: 0.5) : UIColor(white: 204 / 255, alpha: 0.5)
             let actions = self?.sectionForIndex(indexPath.section)?.actions
             let actionsCount = actions!.count
             cell.separatorView?.isHidden = indexPath.item == (self?.collectionView.numberOfItems(inSection: indexPath.section))! - 1
