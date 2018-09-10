@@ -115,7 +115,7 @@ open class BaHaActionController: ActionController<BaHaCell, ActionData, UICollec
                         cell.clipsToBounds = false
                         let shapeLayer = CAShapeLayer()
                         shapeLayer.frame = CGRect(x: 0, y: cell.bounds.height, width: cell.bounds.width, height: 34)
-                        shapeLayer.backgroundColor = UIColor.white.cgColor
+                        shapeLayer.backgroundColor = darkStyle ? UIColor(white: 60 / 255, alpha: 1).cgColor : UIColor.white.cgColor
                         cell.layer.addSublayer(shapeLayer)
                         return
                     }
